@@ -25,6 +25,8 @@ def _main():
         print(f)
     except Exception as err:
         print(err.args[0])
+    finally:
+        server.run(host="0.0.0.0", port=int(os.environ.get('PORT', 5000)))
 
 
 TOKEN = '1003641334:AAGTcXkdNFzHq2KQwXSw_4YIGza0ajGt_og'
